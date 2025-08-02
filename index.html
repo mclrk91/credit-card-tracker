@@ -1,0 +1,55 @@
+// Loyalty numbers state
+            const [loyaltyNumbers, setLoyaltyNumbers] = useState(() => {
+                const saved = localStorage.getItem('loyaltyNumbers');
+                return saved ? JSON.parse(saved) : {
+                    'knownTraveler': [
+                        { id: 1, name: 'Mike (Dad)', number: '157461621', category: 'Known Traveler' },
+                        { id: 2, name: 'Tonya (Mom)', number: '157367880', category: 'Known Traveler' },
+                        { id: 3, name: 'Marissa', number: '159481933', category: 'Known Traveler' },
+                        { id: 4, name: 'Jack', number: '159484492', category: 'Known Traveler' }
+                    ],
+                    'airlines': [
+                        { id: 5, name: 'Jack', number: 'XFS19203', category: 'United', points: '' },
+                        { id: 11, name: 'Marissa', number: 'FZS48862', category: 'United', points: '3,920' },
+                        { id: 9, name: 'Marissa', number: '9159698753', category: 'Delta SkyMiles', points: '3,401', password: 'Johnnyshouse1991!' },
+                        { id: 21, name: 'Jack', number: '9424346279', category: 'Delta SkyMiles' },
+                        { id: 22, name: 'Mike (Dad)', number: '2078330905', category: 'Delta SkyMiles', password: 'Mike0901!' },
+                        { id: 23, name: 'Marissa', number: '1093798799', category: 'Virgin Atlantic' },
+                        { id: 24, name: 'Jack', number: '1093846416', category: 'Virgin Atlantic' },
+                        { id: 25, name: 'Marissa', number: '06497776', category: 'British Airways Avios', password: 'Bentley1!' },
+                        { id: 26, name: 'Jack', number: '90228232', category: 'British Airways Avios' },
+                        { id: 19, name: 'Marissa', number: '3990361422', category: 'JetBlue TrueBlue', points: '309' },
+                        { id: 6, name: 'Marissa', number: '500078965304', category: 'Etihad Guest' },
+                        { id: 27, name: 'Marissa', number: '8169579028', category: 'Singapore Airlines KrisFlyer' },
+                        { id: 28, name: 'Jack', number: '8844793977', category: 'Singapore Airlines KrisFlyer' },
+                        { id: 29, name: 'Marissa', number: '2200629268', category: 'Breeze Airways', points: '1,924 ($19.24)' },
+                        { id: 30, name: 'Marissa', number: '90097336269', category: 'Frontier Miles', points: '4,661', password: 'Dancer1991!' },
+                        { id: 31, name: 'Marissa', number: '122789597', category: 'Air Canada Aeroplan' },
+                        { id: 32, name: 'Marissa', number: 'U501KD0', category: 'American Airlines AAdvantage', points: '560', password: 'dancer1991' },
+                        { id: 33, name: 'Jack', number: 'AU9T302', category: 'American Airlines AAdvantage' },
+                        { id: 34, name: 'Tonya (Mom)', number: 'F878t54', category: 'American Airlines AAdvantage', password: '3216222FL!' },
+                        { id: 35, name: 'Marissa', number: '1008660379', category: 'Spirit Free Spirit', points: '0', password: 'dancer1991' },
+                        { id: 36, name: 'Marissa', number: '807872891', category: 'Qatar Airways Privilege Club' },
+                        { id: 37, name: 'Jack', number: '5266076770', category: 'Air France Flying Blue' },
+                        { id: 38, name: 'Marissa', number: '5218994350', category: 'Air France Flying Blue', password: 'Password1991!' },
+                        { id: 39, name: 'Marissa', number: '4132758605', category: 'ANA Mileage Club' },
+                        { id: 40, name: 'Marissa', number: '20136566004', category: 'Southwest Rapid Rewards', username: 'Marissanclark' },
+                        { id: 41, name: 'Marissa', number: '601038892', category: 'Sun Country Ufly Rewards' }
+                    ],
+                    'hotels': [
+                        { id: 42, name: 'Marissa', number: '557111799O', category: 'World of Hyatt', password: 'M09011991!' },
+                        { id: 43, name: 'Marriott Bonvoy', number: '837276489', category: 'Marriott Bonvoy' },
+                        { id: 44, name: 'Hilton Honors', number: '1434554786', category: 'Hilton Honors' },
+                        { id: 45, name: 'IHG Club', number: '254873052', category: 'IHG One Rewards' },
+                        { id: 46, name: 'Marissa', number: '198400419J', category: 'Wyndham Rewards' },
+                        { id: 47, name: 'Marissa', number: 'PHKCTPA66R', category: 'Preferred Hotels', password: 'Johnnyshouse1991!' }
+                    ],
+                    'other': [
+                        { id: 48, name: 'Marissa Bilt', number: 'TBD', category: 'Bilt Rewards', points: '622' },
+                        { id: 49, name: 'Amtrak Guest Rewards', number: '9039753745', category: 'Amtrak Guest Rewards' },
+                        { id: 50, name: 'Carnival VIFP', number: '36153904', category: 'Carnival VIFP', points: '20' },
+                        { id: 51, name: 'Royal Caribbean', number: '2290932', category: 'Royal Caribbean', note: 'Booking Number' },
+                        { id: 52, name: 'Holland America', number: '051348977', category: 'Holland America' }
+                    ]
+                };
+            });
